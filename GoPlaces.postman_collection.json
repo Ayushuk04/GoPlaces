@@ -1,0 +1,683 @@
+{
+	"info": {
+		"_postman_id": "c0a2e8e7-044f-4129-9ffb-71fef5445b40",
+		"name": "GoPlaces",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27434835"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\":\"to check delete\",\r\n        \"age\":30,\r\n        \"gender\":\"Male\",\r\n        \"password\":\"GoPlaces123\",\r\n        \"email\":\"ankitnegi17@gmail.com\",\r\n        \"mobNo\":\"6397895428\",\r\n        \"dateCreated\":\"\",\r\n        \"createdBy\":\"\",\r\n        \"createdAt\":\"\"\r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \"id\": \"40289d748c2a6c8b018c2a74812e0000\",\r\n            \"name\": \"Ankit Negi\",\r\n            \"age\": 24,\r\n            \"gender\": \"Male\",\r\n            \"password\": \"GoPlaces123\",\r\n            \"email\": \"ankitnegi17@gmail.com\",\r\n            \"mobNo\": \"6397895428\",\r\n            \"dateCreated\": null,\r\n            \"createdBy\": \"\",\r\n            \"createdAt\": \"\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/40289d748c2a6c8b018c2a74812e0000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"40289d748c2a6c8b018c2a74812e0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/40289d748c2a6c8b018c2a74812e0000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"40289d748c2a6c8b018c2a74812e0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/40289d748c2a6c8b018c2a7713450002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"40289d748c2a6c8b018c2a7713450002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/search/Ankit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"search",
+								"Ankit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usersInTrip",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/40289d748c25be13018c25c5427b0002/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"40289d748c25be13018c25c5427b0002",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trips",
+			"item": [
+				{
+					"name": "createTrip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n      \"name\":\"ParaGliding\",\r\n      \"desc\":\"Can write description of total days of trips.\",\r\n      \"startDate\":\"2023-12-04\",\r\n      \"endDate\":\"2023-12-06\",\r\n      \"departureTime\":\"08:00:00\",\r\n      \"pickupPoint\":\"XYZ loccation\",\r\n      \"tripEssentials\":\"Acc to your needs.\",\r\n      \"dateCreated\":\"\",\r\n      \"createdBy\":\"\",\r\n      \"createdAt\":\"\"\r\n   \r\n             \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trips/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTrips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trips/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTrips",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"name\": \"ParaGliding\",\r\n    \"desc\": \"Can write description of total days of trips.\",\r\n    \"startDate\": \"2023-12-04T00:00:00.000+00:00\",\r\n    \"endDate\": \"2023-12-06T00:00:00.000+00:00\",\r\n    \"departureTime\": \"08:00:00\",\r\n    \"pickupPoint\": \"XYZ loccation\",\r\n    \"tripEssentials\": \"Adhar card,medical certificate.\",\r\n    \"dateCreated\": null,\r\n    \"createdBy\": \"\",\r\n    \"createdAt\": \"\",\r\n    \"assignedUser\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trips/40289d748c2a6c8b018c2a81466a0003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"40289d748c2a6c8b018c2a81466a0003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTripById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trips/40289d748c2634b5018c26729cb20001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"40289d748c2634b5018c26729cb20001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTripById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trips/40289d748c25be13018c25c5427b0002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"40289d748c25be13018c25c5427b0002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchTripsByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trips/search/Mountain",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"search",
+								"Mountain"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUserToTrip",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trips/40289d748c25be13018c25c5427b0002/user/40289d748c203d05018c203e42340000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"40289d748c25be13018c25c5427b0002",
+								"user",
+								"40289d748c203d05018c203e42340000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUserFromTrip",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trips/40289d748c25be13018c25c5427b0002/user/40289d748c1fa4ef018c1fa575340000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"40289d748c25be13018c25c5427b0002",
+								"user",
+								"40289d748c1fa4ef018c1fa575340000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tripsOfuser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trips/40289d748c203d05018c203ee47b0001/trips",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"40289d748c203d05018c203ee47b0001",
+								"trips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPlaceToTrip",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trips/40289d748c2634b5018c2670dbc00000/place/40289d748c2b39f4018c2b3cc1af0002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"40289d748c2634b5018c2670dbc00000",
+								"place",
+								"40289d748c2b39f4018c2b3cc1af0002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePlaceFromTrip",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trips/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Places",
+			"item": [
+				{
+					"name": "createPlace",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n                \"placeName\":\"Rishikesh\",\r\n                \"stateName\":\"Uttrakhand\",\r\n                \"desc\":\"About Harshil\",\r\n                \"latitude\":\"\",\r\n                \"longitude\": \"\",\r\n                \"dateCreated\":\"\",\r\n                \"createdBy\":\"\",\r\n                \"createdAt\":\"\"\r\n             }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/places/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"places",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePlace",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \"id\": \"40289d748c2b39f4018c2b3cc1af0002\",\r\n            \"stateName\": \"Uttrakhand\",\r\n            \"placeName\": \"Rishikesh\",\r\n            \"desc\": \"About Rishikesh\",\r\n            \"latitude\": null,\r\n            \"longitude\": null,\r\n            \"trip\": null,\r\n            \"dateCreated\": null,\r\n            \"createdBy\": \"\",\r\n            \"createdAt\": \"\"\r\n        \r\n        \r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/places/40289d748c2b39f4018c2b3cc1af0002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"places",
+								"40289d748c2b39f4018c2b3cc1af0002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePlaces",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/places/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"places",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPlaces",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/places/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"places",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addAccomodationToPlace",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/places/40289d748c2b39f4018c2b3c41f70000/accommodation/40289d748c2e8935018c2e8956000000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"places",
+								"40289d748c2b39f4018c2b3c41f70000",
+								"accommodation",
+								"40289d748c2e8935018c2e8956000000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delAccommodationFromPlace",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PlaceAccommodation",
+			"item": [
+				{
+					"name": "addAccommodation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"propertyName\":\"Ganga Kinare\",\r\n    \"desc\":\"Nestled snugly on the banks of a tranquil River Ganges, GANGA KINARE - by A Riverside Boutique Resort is a charming boutique hotel in the sanctum of Rishikesh, a land where spirituality and Mother Nature blend into a heady concoction. The only hotel resort in Rishikesh built right on the banks of the Ganges, Ganga Kinare overlooks the Rajaji National Park, one of North India’s expansive sanctuaries and a melting pot of diverse flora and fauna. Ganga Kinare - hotel and resort boasts a waterside esplanade, where guests can stroll alongside the sinuous river, soak in the sight of the mountains and revel in the sheer verdancy of the surroundings.\",\r\n    \"address\":\"Barrage Road, 237, Virbhadra Rd, near AIIMS, Sturida Colony, Rishikesh, Uttarakhand 249201 \",\r\n    \"booking_link\":\"https://www.gangakinare.com/ganga-kinare-rishikesh-hotel-resort/\",\r\n    \"images\":\"\",\r\n    \"createdAt\":\"\",\r\n    \"createdBy\":\"\",\r\n    \"dateCreated\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/accommodation/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"accommodation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allHotels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/accommodation/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"accommodation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editHotels",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \"id\": \"40289d748c2e8935018c2e8956000000\",\r\n            \"propertyName\": \"Sterling Mussoorie\",\r\n            \"desc\": \"The 5.5-acre resort is perched on a cliff and the rooms below the main block provide mesmerising views of the picturesque Doon valley. Enjoy the tranquil surroundings and burn calories as you take the stairs up from your room to the restaurant to gorge on Garhwali cuisine.Did you know that winterline is visible only at two places in the whole world? One is in Switzerland and the other is right here at Mussoorie.The resort has 111 well-appointed rooms with a huge window in each room, from where you can enjoy the beauty of the alluring Doon valley. You can just grab a cup of tea and watch the clouds dancing around. If you are feeling adventurous, the rocky forest terrain has many trekking routes. And the resort's Holiday Activity Centre has a list of experiences like rope adventures, zip line, paintball, etc.As a courtesy to all our guests: Hookah / Sheesha are not permitted in the resort. Portable speakers also are not allowed in the resort.\",\r\n\r\n\r\n\r\n\r\n\r\n\r\n            \"address\": \"Sher Ghari Mussoorie\",\r\n            \"booking_link\": \"https://www.sterlingholidays.com/resorts-hotels/mussoorie\",\r\n            \"images\": \"\",\r\n            \"createdAt\": \"\",\r\n            \"createdBy\": \"\",\r\n            \"dateCreated\": null\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/accommodation/40289d748c2e8935018c2e8956000000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"accommodation",
+								"40289d748c2e8935018c2e8956000000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delAccommodation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/accommodation/40289d748c2f6031018c2f60ed530000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"accommodation",
+								"40289d748c2f6031018c2f60ed530000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
